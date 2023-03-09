@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About 선진</title>
+    <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrap.min.css' %}" media="screen">
+    <link rel="stylesheet" href="{% static 'single_pages/css/about_me.css' %}" media="screen">
+    <script src="https://kit.fontawesome.com/726bbd6862.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    {% include 'blog/navbar.html' %}
+
+    <section>
+        <div class="container mt-4">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1>안녕하세요. 선진입니다.</h1>
+                    <br/>
+                    <p class="lead">
+                        뫄뫄뫄
+                    </p>
+
+                    <ul>
+                        <li>Work Experience</li>
+                        <ul>
+                            <li>회사1</li>
+                            <li>회사2</li>
+                        </ul>
+                        <li>Education</li>
+                        <ul>
+                            <li>초등</li>
+                            <li>중등</li>
+                            <li>고등</li>
+                        </ul>
+                        <li>Etc.</li>
+                        <ul>
+                            <li>뫄</li>
+                            <li>뫔</li>
+                        </ul>
+                    </ul>
+                </div>
+                <div class="col-lg-4">
+                    <img class="img-fluid" src="#" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="bg-light margin-for-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-12">
+                    <h1>PORTFOLIO</h1>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card" data-toggle="modal" data-target="#pycon2017">
+                        <img class="card-img-top" src="{% static 'single_pages/images/star.jpg' %}">
+                        <div class="card-body">
+                            <h5 class="card-title">제목</h5>
+                            <p>내용</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-lg-4">
+                    <div class="card" data-toggle="modal" data-target="#inflearn_django2">
+                        <img class="card-img-top" src="{% static 'single_pages/images/star.jpg' %}">
+                        <div class="card-body">
+                            <h5 class="card-title">제목</h5>
+                            <p>내용</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="col-lg-4">
+                    <div class="card" data-toggle="modal" data-target="#automation_python">
+                        <img class="card-img-top" src="{% static 'single_pages/images/star.jpg' %}">
+                        <div class="card-body">
+                            <h5 class="card-title">제목</h5>
+                            <p>내용</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+        </div>
+    </section>
+    
+    <!-- Modal -->
+    <div class="modal fade" id="pycon2017" tabindex="-1" role="dialog" aria-labelledby="pycon2017ModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="pycon2017ModalLabel">---</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <img class="img-fluid" src="{% static 'single_pages/images/star.jpg' %}">
+                        </div>
+                        <div class="col-lg-5">
+                            <p>---</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="modal fade" id="inflearn_django2" tabindex="-1" role="dialog" aria-labelledby="inflearnDjangoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id=" inflearnDjangoModalLabel">---</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <img class="img-fluid" src="{% static 'single_pages/images/star.jpg' %}">
+                        </div>
+                        <div class="col-lg-5">
+                            <p>---</p>
+                            <button type="button" class="btn btn-light"><i class="fas fa-chalkboard-teacher"></i> --</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+    <div class="modal fade" id="automation_python" tabindex="-1" role="dialog" aria-labelledby="automationPythonModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id=" automationPythonModalLabel">--</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-7">
+                            <img class="img-fluid" src="{% static 'single_pages/images/star.jpg' %}">
+                        </div>
+                        <div class="col-lg-5">
+                            <p>--</p>
+                            <button type="button" class="btn btn-light"><i class="fas fa-chalkboard-teacher"></i> --</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="fixed-bottom">
+        {% include 'blog/footer.html' %}
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+</html>
