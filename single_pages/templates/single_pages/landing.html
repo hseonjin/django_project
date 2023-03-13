@@ -5,30 +5,69 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Do It Django</title>
+    <title>Seonjin_Blog</title>
     <link rel="stylesheet" href="{% static 'blog/bootstrap/bootstrap.min.css' %}" media="screen">
     <link rel="stylesheet" href="{% static 'single_pages/css/landing.css' %}" media="screen">
     <script src="https://kit.fontawesome.com/726bbd6862.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.2.3/dist/sketchy/bootstrap.min.css" rel="stylesheet">
+
+   <style>
+    a {
+        text-decoration: none;  
+    }
+    a:hover {
+        text-decoration: none;
+        color: #37ad00;
+        font-weight: bold;
+    }
+    * {
+        letter-spacing: 1px;
+    }
+    .mt-1 {
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    </style>
 </head>
 
 <body>
-    {% include 'blog/navbar.html' %}
+    {% include './navbar.html' %}
     <section>
         <div class="container">
             <div class="row justify-content-between">
-                <div class="col-lg-6 text-light">
-                    <h1 class="mt-5">안녕하세요</h1>
-                    <p>허선진@</p>
+                <!-- <div class="col-lg-6 text-light">
+                    <h1 class="mt-5">Heo-Seonjin<br/></h1>
+                    <p>
+                        <br/>느릴지라도 끊임없이 나아가는 신입 개발자 허선진입니다. <br/>
+                        알고리즘 로직 리뷰를 위한 블로그입니다. <br/>
+                    </p>
+                    <h3 class="mt-5"><a href="https://github.com/hseonjin" target="_blank"
+                        class="github"><i class="fab fa-github fa-lg"></i>&nbsp; GitHub</a></h3>
+                </div> -->
+
+                <div class="col-lg-6 mt-5">
+                    <h2 class="text-light">허선진 | Heo-Seonjin</h2>
+                    <div class="card mt-1">
+                        <div class="card-body">
+                            <p>
+                                <br/>느릴지라도 끊임없이 나아가는 신입 개발자 허선진입니다. <br/>
+                                알고리즘 로직 리뷰를 위한 블로그입니다. <br/>
+                            </p>
+                            <h3 class="mt-5"><a href="https://github.com/hseonjin" target="_blank"
+                                class="github"><i class="fab fa-github fa-lg"></i>&nbsp; <Strong>GitHub</Strong></a></h3>
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="col-lg-5 mt-5">
-                    <h2 class="text-light">Blog - Recent posts</h2>
+                    <h2 class="text-light">Blog - New Post</h2>
                     {% for post in recent_posts %}
                     <div class="card mt-1">
                         <div class="card-body">
-                            <h6><a href="{{ post.get_absolute_url }}" class="text-decoration-none text-dark">{{ post.title }}</a></h6>
-                            <span class="badge badge-pill badge-light float-right">
+                            <p><a href="{{ post.get_absolute_url }}" class="text-decoration-none">
+                                {{ post.title }}</strong></a></p>
+                            <span class="badge badge-pill badge-light float-right" style="color:black">
                                 <img class="mr-1 rounded-circle" width="20px" src="{{ post.get_avatar_url }}" alt="{{ post.author }}">
-                                {{ post.created_at }}
+                                {{ post.created_at |date:'y년 m월 d일 H:m'  }}
                             </span>
                         </div>
                     </div>
@@ -38,9 +77,9 @@
         </div>
     </section>
 
-    <div class="fixed-bottom">
-        {% include 'blog/footer.html' %}
-    </div>
+    <!-- <div class="fixed-bottom">
+        include 'blog/footer.html' %}
+    </div> -->
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
