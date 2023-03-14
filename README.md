@@ -1,6 +1,4 @@
-# Django-Blog Project
-
-## [👉🏻 seonjin_blog 링크](https://seonjin.pythonanywhere.com "개발블로그")
+# Django-Blog Project [👉🏻 seonjin_blog](https://seonjin.pythonanywhere.com "개발블로그")
 
 &nbsp;
 &nbsp;
